@@ -1,163 +1,67 @@
-# Number Guessing Game 🎮
+# Number Guessing Game Web Application
 
-**CODSOFT Task 1: Java Development Internship**
+A modern, interactive number guessing game built with HTML, CSS, and JavaScript. The game challenges players to guess a randomly generated number within a specified range.
 
-A fun and interactive number guessing game built in Java with advanced features including scoring system, multiple rounds, and detailed statistics.
+## Features
 
-## 🎯 Features
+### ✅ Functional Requirements
+- **Random Number Generation**: Generates a random number within a specified range (default: 1-100)
+- **User Input**: Prompts the user to enter their guess
+- **Intelligent Feedback**: Provides real-time feedback (Too high, Too low, Correct)
+- **Attempt Limit**: Limits the number of attempts (10 by default)
+- **Multiple Rounds**: Supports multiple rounds with "Play Again" option
+- **Score System**: Maintains scores based on attempts taken and rounds won
 
-### Core Features
-- **Random Number Generation**: Generates random numbers between 1-100
-- **User Input Validation**: Robust input handling with error checking
-- **Smart Feedback**: Provides hints (too high/too low) for each guess
-- **Attempt Limiting**: Maximum 10 attempts per round
-- **Multiple Rounds**: Play as many rounds as you want
-- **Scoring System**: Points based on number of attempts (lower = better)
+### 🎨 UI/UX Requirements
+- Clean, modern game-card layout
+- Large readable input fields and buttons
+- Real-time feedback messages
+- Progress indicator for attempts left
+- Smooth animations and transitions
+- Dark/light mode toggle
+- Fully responsive design (mobile + desktop)
 
-### Advanced Features
-- **Real-time Statistics**: Track rounds played, win rate, and best performance
-- **Beautiful UI**: ASCII art borders and emojis for enhanced user experience
-- **Performance Tracking**: Records best score across all rounds
-- **Detailed Results**: Comprehensive final report with all statistics
+### 🚀 Advanced Enhancements
+- Adjustable number range (1-50, 1-100, 1-200, 1-500)
+- Best score tracking using localStorage
+- Restart and reset controls
+- Guess history tracking
+- Visual feedback for game states
 
-## 🚀 Installation & Setup
+## How to Play
 
-### Prerequisites
-- Java 11 or higher
-- Maven 3.6 or higher
+1. Open the `index.html` file in any modern web browser
+2. Select your preferred number range (1-50, 1-100, 1-200, or 1-500)
+3. Enter your guess in the input field
+4. Click "Submit Guess" or press Enter
+5. Receive feedback on whether your guess was too high or too low
+6. Continue guessing until you find the number or run out of attempts
+7. Use the control buttons to start a new game, restart, or reset scores
 
-### Build Instructions
+## Technical Details
 
-1. **Clone or download the project**
-   ```bash
-   cd number-guessing-game
-   ```
+- Built with vanilla HTML, CSS, and JavaScript (no frameworks)
+- Responsive design using CSS Flexbox and Grid
+- Modern CSS features like CSS variables for theming
+- LocalStorage for score persistence
+- Modular JavaScript with clear functions
+- Well-commented code for maintainability
 
-2. **Compile the project**
-   ```bash
-   mvn clean compile
-   ```
+## Game Features
 
-3. **Run the game**
-   ```bash
-   mvn exec:java -Dexec.mainClass="com.codsoft.NumberGuessingGame"
-   ```
+- **Scoring System**: Points based on attempts remaining when you guess correctly
+- **Progress Bar**: Visual indicator of remaining attempts
+- **Guess History**: Track your previous guesses
+- **Statistics**: Current score, best score, games played, and games won
+- **Range Selection**: Choose from different difficulty levels
 
-   Or build and run the JAR:
-   ```bash
-   mvn clean package
-   java -jar target/number-guessing-game-1.0.0.jar
-   ```
+## Browser Compatibility
 
-## 🎮 How to Play
+The application works in all modern browsers (Chrome, Firefox, Safari, Edge) that support:
+- localStorage
+- CSS variables
+- Flexbox and Grid layout
 
-1. **Start the Game**: Run the application
-2. **Read Rules**: Review the game rules displayed at startup
-3. **Make Guesses**: Enter numbers between 1-100
-4. **Get Feedback**: Receive hints after each guess
-5. **Win or Lose**: Guess correctly within 10 attempts or try again
-6. **Play Again**: Choose to play multiple rounds
-7. **View Results**: See your final statistics and performance
+## Score Persistence
 
-## 📊 Scoring System
-
-- **1 attempt**: 100 points
-- **2 attempts**: 90 points
-- **3 attempts**: 80 points
-- **...and so on**
-- **10+ attempts**: 10 points (minimum)
-
-## 🏆 Game Statistics
-
-The game tracks:
-- Total rounds played
-- Rounds won
-- Win rate percentage
-- Best performance (lowest attempts)
-- Best score (highest points)
-
-## 🎨 Sample Output
-
-```
-╔══════════════════════════════════════════════════════════════╗
-║                    NUMBER GUESSING GAME                     ║
-║                        CODSOFT Task 1                       ║
-╠══════════════════════════════════════════════════════════════╣
-║  Rules:                                                      ║
-║  • Guess a number between 1 and 100                    ║
-║  • You have 10 attempts per round                           ║
-║  • Score is based on number of attempts (lower = better)     ║
-║  • Play multiple rounds to improve your score!               ║
-╚══════════════════════════════════════════════════════════════╝
-
-🎮 ROUND 1 🎮
-==================================================
-📝 Enter your guess (1-100) [Attempt 1/10]: 50
-⬇️  Too high! Try a lower number.
-💡 Hints remaining: 9
-
-📝 Enter your guess (1-100) [Attempt 2/10]: 25
-⬆️  Too low! Try a higher number.
-💡 Hints remaining: 8
-
-🎉 CONGRATULATIONS! You guessed it in 3 attempts!
-🏆 Your score for this round: 80 points
-```
-
-## 🛠️ Technical Details
-
-### Project Structure
-```
-number-guessing-game/
-├── pom.xml                          # Maven configuration
-├── README.md                        # This file
-└── src/
-    └── main/
-        └── java/
-            └── com/
-                └── codsoft/
-                    └── NumberGuessingGame.java  # Main game class
-```
-
-### Key Classes
-- **NumberGuessingGame**: Main game logic and user interface
-- **Random**: Java utility for random number generation
-- **Scanner**: Input handling and validation
-
-### Design Patterns
-- **Single Responsibility**: Each method has a specific purpose
-- **Input Validation**: Robust error handling for user input
-- **Modular Design**: Clean separation of concerns
-
-## 🎯 Learning Objectives
-
-This project demonstrates:
-- **Java Fundamentals**: Variables, loops, conditionals, methods
-- **Object-Oriented Programming**: Classes, encapsulation, data organization
-- **User Input Handling**: Scanner class, input validation, error handling
-- **Random Number Generation**: Math.random() and Random class
-- **String Manipulation**: Formatting, concatenation, emoji usage
-- **Maven Project Management**: Build configuration and dependencies
-
-## 📝 CODSOFT Internship Requirements
-
-✅ **Task Completion**: Complete number guessing game with all required features  
-✅ **GitHub Repository**: Properly organized project structure  
-✅ **Documentation**: Comprehensive README with setup instructions  
-✅ **Code Quality**: Clean, well-commented, and maintainable code  
-✅ **Advanced Features**: Scoring system, multiple rounds, statistics  
-
-## 🏷️ Tags
-
-#codsoft #internship #javadevelopment #numbergame #consoleapp
-
-## 📞 Support
-
-For questions or issues related to this CODSOFT task, please refer to the internship guidelines or contact your mentor.
-
----
-
-**Developed for CODSOFT Java Development Internship**  
-**Task 1: Number Guessing Game**  
-**Author: [Your Name]**  
-**Date: [Current Date]** 
+The game saves your best score, games played, and games won using localStorage, so your progress is maintained between sessions.
